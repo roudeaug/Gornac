@@ -1,0 +1,3 @@
+gr_showcase_homepage:
+    path:     /
+    defaults: { _controller: GRShowcaseBundle:Showcase:index }

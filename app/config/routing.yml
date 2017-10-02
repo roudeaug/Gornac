@@ -1,0 +1,4 @@
+gr_showcase:
+    resource: "@GRShowcaseBundle/Resources/config/routing.yml"
+    prefix:   /
+

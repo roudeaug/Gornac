@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Gornac.com">
+        <meta name="author" content="Gaëtan Roudeau">
+        <!--<link rel="shortcut icon" href="assets/ico/favicon.png">-->
+
+        <title>{% block title %}Gornac.com{% endblock %}</title>
+        
+        {% block stylesheets %}
+            <!-- Google Font -->
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent+Marker">
+            <!-- Material Icons -->
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
+            <!-- Font Awesome -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/faont-awesome.min.css" >
+            <!-- Bootstrap cores -->
+            <link rel="stylesheet" href="css/bootstrap.min.css">
+            <link rel="stylesheet" href="css/mdb.min.css">
+            <link rel="stylesheet" href="css/style.min.css">
+            <link rel="stylesheet" href="css/font-awesome.min.css">
+            <!-- Custom css -->
+            <link rel="stylesheet" href="css/main.css">
+        {% endblock %}
+
+   
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <!-- Body block -->
+        {% block body %} Hello World {% endblock %}
+
+        <!-- Script block -->
+        {% block javascripts %}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        {% endblock %}        
+        
+    </body>
+</html>
