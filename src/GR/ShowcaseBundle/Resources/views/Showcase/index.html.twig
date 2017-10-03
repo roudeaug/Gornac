@@ -3,49 +3,87 @@
 {% block title %} Acceuil - {{ parent() }} {% endblock %}
 
 {% block body %}
-    {% block caroussel %}
+    <!-- Carousel block -->
+    {% block carousel %}
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol>
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-        <img src="img/caroussel/slide-1.jpeg" alt="image 1" class="img-responsive">
-        <div class="carousel-caption d-none d-md-block">
-            <h2> Première image </h2>
-            <p> Voici le texte de la première image </p>
-        </div>
-    </div>
-    <div class="item">
-        <img src="img/caroussel/slide-2.jpeg" alt="image 2" class="img-responsive">
-        <div class="carousel-caption">
-            <h2> Deuxième image </h2>
-            <p> Voici le texte de la deuxième image </p>
-        </div>
-    </div>
-    <div class="item">
-        <img src="img/caroussel/slide-3.jpeg" alt="image 3" class="img-responsive">
-        <div class="carousel-caption">
-            <h2> Troisième image </h2>
-            <p> Voici le texte de la troisième image </p>
-        </div>
-    </div>
-  </div>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="img/caroussel/slide-1.jpeg" alt="image 1" class="img-responsive">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2> Première image </h2>
+                        <p> Voici le texte de la première image </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/caroussel/slide-2.jpeg" alt="image 2" class="img-responsive">
+                    <div class="carousel-caption">
+                        <h2> Deuxième image </h2>
+                        <p> Voici le texte de la deuxième image </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/caroussel/slide-3.jpeg" alt="image 3" class="img-responsive">
+                    <div class="carousel-caption">
+                        <h2> Troisième image </h2>
+                        <p> Voici le texte de la troisième image </p>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
     {% endblock %}
+
+    <!-- Graphic navigation bar -->
+    {% block graphnavbar %}
+		<div class="container-fluid" id="graphnav" >
+			<div class="row">
+				<div class="col-lg-3 col-md-6 col-sm-6 callout">
+                    <i class="fa fa-university fa-2x visible-xs-block"></i>
+                    <i class="fa fa-university fa-3x visible-sm-block visible-md-block visible-lg-block"></i>  
+					<h2 class="h2-item">Municipalit&eacute;</h2>
+					<p  class="p-item">D&eacute;couvrez les &eacute;lus ainsi que les diff&eacute;rents services municipaux</p>
+				</div><!-- col-lg-3 -->
+					
+				<div class="col-lg-3 col-md-6 col-sm-6 callout">
+					<i class="fa fa-eur fa-2x visible-xs-block"></i>
+                    <i class="fa fa-eur fa-3x visible-sm-block visible-md-block visible-lg-block"></i>
+					<h2 class="h2-item">&Eacute;conomie </h2>
+					<p  class="p-item">D&eacute;couvrez les différents commerces, services et entreprises du territoire</p>
+				</div><!-- col-lg-3 -->	
+				
+				<div class="col-lg-3 col-md-6 col-sm-6 callout">
+					<i class="fa fa-handshake-o fa-2x visible-xs-block"></i>
+                    <i class="fa fa-handshake-o fa-3x visible-sm-block visible-md-block visible-lg-block"></i>
+					<h2 class="h2-item">R&eacute;seau associatif</h2>
+					<p  class="p-item">D&eacute;couvrez les nombreuses associations et &eacute;v&egrave;nements organis&eacute;s</p>
+				</div><!-- col-lg-3 -->	
+
+                <div class="col-lg-3 col-md-6 col-sm-6 callout">
+					<i class="fa fa-info-circle fa-2x visible-xs-block"></i>
+                    <i class="fa fa-info-circle fa-3x visible-sm-block visible-md-block visible-lg-block"></i>
+					<h2 class="h2-item">Tourisme</h2>
+					<p  class="p-item">D&eacute;couvrez les activit&eacute;s et les richesses culturelles et historiques</p>
+				</div><!-- col-lg-3 -->
+			</div><!-- row -->
+        </div>
+    </div> <!--end graphnavbar -->
+    {% endblock %}
+
 {% endblock %}
