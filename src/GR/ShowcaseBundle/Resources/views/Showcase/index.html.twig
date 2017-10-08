@@ -1,104 +1,269 @@
-{% extends "::base.html.twig"%}
+{% extends "::base.html.twig" %}
 
 {% block title %} Acceuil - {{ parent() }} {% endblock %}
 
 {% block body %}
-    <!-- Carousel block -->
-    {% block carousel %}
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
+    
+    <!--*************************************-->
+    <!-- Carousel                            -->
+    <!--*************************************-->
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
 
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <a href="#">
-                        <img src="img/caroussel/slide-1.jpeg" alt="image 1" class="img-responsive">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h2> Première image </h2>
-                            <p> ksjhvisjbvjksrbvsnrvjkbsirbvljksnvkjbsivknrvlnsknvlkslkvnrlnvoilnsjrbvsbrvkjnj </p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="item">
-                    <a href="#">
-                        <img src="img/caroussel/slide-2.jpeg" alt="image 2" class="img-responsive">
-                        <div class="carousel-caption">
-                            <h2> Deuxième image </h2>
-                            <p> Voici le texte de la deuxième image </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#">
-                        <img src="img/caroussel/slide-3.jpeg" alt="image 3" class="img-responsive">
-                        <div class="carousel-caption">
-                            <h2> Troisième image </h2>
-                            <p> Voici le texte de la troisième image </p>
-                        </div>
-                    </a>
-                </div>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <a href="#">
+                    <img src="img/showcase/caroussel/slide-1.jpeg" alt="image 1" class="img-responsive">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1> Première image </h1>
+                        <p> Voici le texte de la deuxième image </p>
+                    </div>
+                </a>
             </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+              
+            <div class="item">
+                <a href="#">
+                    <img src="img/showcase/caroussel/slide-2.jpeg" alt="image 2" class="img-responsive">
+                    <div class="carousel-caption">
+                        <h1> Deuxième image </h1>
+                        <p> Voici le texte de la deuxième image </p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <img src="img/showcase/caroussel/slide-3.jpeg" alt="image 3" class="img-responsive">
+                    <div class="carousel-caption">
+                        <h1> Troisième image </h1>
+                        <p> Voici le texte de la troisième image </p>
+                    </div>
+                </a>
+            </div>
         </div>
-    {% endblock %}
 
-    <!-- Graphic navigation bar -->
-    {% block graphnavbar %}
-		<div class="container-fluid" id="graphnav" >
-			<div class="row">
-				<div class="col-lg-3 col-md-6 col-sm-6 callout">
-                    <a href="#">
-                        <i class="fa fa-university fa-2x visible-xs-block"></i>
-                        <i class="fa fa-university fa-3x visible-sm-block visible-md-block visible-lg-block"></i>  
-                        <h2 class="h2-item">Administration</h2>
-                        <p  class="p-item">D&eacute;couvrez les diff&eacute;rents services municipaux ainsi que l'&eacute;quipe municipale</p>
-                    </a>
-				</div><!-- col-lg-3 -->
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    
+    <!--*************************************-->
+    <!-- Graphic navigation bar              -->
+    <!--*************************************-->
+    <div id="graphnav" class="container-fluid">
+		<div class="row">
+			<div class="col-lg-3 col-md-6 col-sm-6 callout">
+                <a href="#">
+                    <i class="fa fa-university fa-3x visible-xs-block"></i>
+                    <i class="fa fa-university fa-4x visible-sm-block visible-md-block visible-lg-block"></i>  
+                    <h1>Administration</h1>
+                    <p>D&eacute;couvrez les diff&eacute;rents services municipaux ainsi que l'&eacute;quipe municipale</p>
+                </a>
+			</div><!-- end col-lg-3 -->
 					
-				<div class="col-lg-3 col-md-6 col-sm-6 callout">
-                    <a href="#">
-                        <i class="fa fa-eur fa-2x visible-xs-block"></i>
-                        <i class="fa fa-eur fa-3x visible-sm-block visible-md-block visible-lg-block"></i>
-                        <h2 class="h2-item">&Eacute;conomie </h2>
-                        <p  class="p-item">D&eacute;couvrez les différents commerces, services et entreprises du territoire</p>
-                    </a>
-				</div><!-- col-lg-3 -->	
+			<div class="col-lg-3 col-md-6 col-sm-6 callout">
+                <a href="#">
+                    <i class="fa fa-eur fa-3x visible-xs-block"></i>
+                    <i class="fa fa-eur fa-4x visible-sm-block visible-md-block visible-lg-block"></i>
+                    <h1>&Eacute;conomie </h1>
+                    <p>D&eacute;couvrez les différents commerces, services et entreprises du territoire</p>
+                </a>
+			</div><!-- end col-lg-3 -->	
 				
-				<div class="col-lg-3 col-md-6 col-sm-6 callout">
-                    <a href="#">
-                        <i class="fa fa-handshake-o fa-2x visible-xs-block"></i>
-                        <i class="fa fa-handshake-o fa-3x visible-sm-block visible-md-block visible-lg-block"></i>
-                        <h2 class="h2-item">Associations</h2>
-                        <p  class="p-item">D&eacute;couvrez les nombreuses associations et &eacute;v&egrave;nements organis&eacute;s</p>
-                    </a>
-				</div><!-- col-lg-3 -->	
+			<div class="col-lg-3 col-md-6 col-sm-6 callout">
+                <a href="#">
+                    <i class="fa fa-handshake-o fa-3x visible-xs-block"></i>
+                    <i class="fa fa-handshake-o fa-4x visible-sm-block visible-md-block visible-lg-block"></i>
+                    <h1>Associations</h1>
+                    <p>D&eacute;couvrez les nombreuses associations et &eacute;v&egrave;nements organis&eacute;s</p>
+                </a>
+			</div><!-- end col-lg-3 -->	
 
-                <div class="col-lg-3 col-md-6 col-sm-6 callout">
-                    <a href="#">
-                        <i class="fa fa-home fa-2x visible-xs-block"></i>
-                        <i class="fa fa-home fa-3x visible-sm-block visible-md-block visible-lg-block"></i>
-                        <h2 class="h2-item">Vivre &agrave; Gornac</h2>
-                        <p  class="p-item">D&eacute;couvrez les activit&eacute;s et les richesses culturelles et historiques</p>
-                    </a>
-				</div><!-- col-lg-3 -->
-			</div><!-- row -->
-        </div>
-    </div> <!--end graphnavbar -->
-    {% endblock %}
+            <div class="col-lg-3 col-md-6 col-sm-6 callout">
+                <a href="#">
+                    <i class="fa fa-home fa-3x visible-xs-block"></i>
+                    <i class="fa fa-home fa-4x visible-sm-block visible-md-block visible-lg-block"></i>
+                    <h1>Vivre &agrave; Gornac</h1>
+                    <p>D&eacute;couvrez les activit&eacute;s et les richesses culturelles et historiques</p>
+                </a>
+			</div><!-- end col-lg-3 -->
+		</div><!-- end row -->
+    </div> <!--end graphnav -->
+
+   
+    <!--*************************************-->
+    <!-- About                            -->
+    <!--*************************************-->
+    <div id="about">
+        <div class="subtextdivider">
+		    <div class="container">
+			    <h1>Gornac en bref</h1>
+			    <hr>
+		    </div><!-- end container -->
+	    </div><!-- end subtext -->
+        <div class="container">
+            <div class="row white">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <p> Commune girondine, située au cœur de l'Entre-Deux-Mers, Gornac est située sur une crête au carrefour de plusieurs routes 
+                        menant à Sauveterre-de-Guyenne, à l'Est, de Cadillac, au Sud-Ouest, et de Langon au Sud-Est (voir section localisation). 
+                        Sa superficie s'étend sur 8,35 km2 (835 ha) avec une densité de population d'environ 44 hab/km2.
+                        Les Gornacais résident en majorité dans des maisons ou des fermes (plus de 98 %). Près de 65 % d'entre eux sont propriétaires 
+                        de leur maison. Une proportion importante de la population active travaille sur place. </p>
+                </div><!-- end col-lg-6 -->
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <p> En 2013, on dénombre un épicier, un salon de coiffure, un garage et une station d'essence, une agence bancaire, une agence 
+                        postale communale, une pharmacie, un médecin, un notaire.
+                        Sur son territoire opèrent également plusieurs artisans et entreprises : charpentier-couvreur, maçon, vente et réparation 
+                        d'équipements agri et viticoles, vente de produits phytosanitaires, fabricant d'équipements viti-vinicoles, consultant en 
+                        marketing et export, promoteur et organisateur de spectacles et évènements... </p>
+                </div><!-- end col-lg-6 -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!--end about -->
+
+    
+    
+    <!--*************************************-->
+    <!-- Administration                      -->
+    <!--*************************************-->
+    <!-- ==== Section divider -->
+	<div class="section-divider textdivider dividerAdministration">
+		<div class="container">
+            <i class="fa fa-university fa-3x visible-xs-block"></i>
+            <i class="fa fa-university fa-4x visible-sm-block visible-md-block visible-lg-block"></i>
+			<h1>ADMINISTRATION</h1>
+			<hr>
+			<p>Découvrez les différents services municipaux ainsi que les élus</p>
+		</div><!-- end container -->
+	</div><!-- end section -->
+    
+    <!-- Town services -->
+    <div id="townservices" class="centered">
+        <div class="subtextdivider">
+            <div class="container">
+                <h1>Les services communaux</h1>
+                <hr>
+            </div><!-- end container -->
+        </div><!-- end section -->
+
+        <div class="container-fluid">
+            <div class="row services">
+                <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 service">
+                    <div id="service-1" class="services-heading">
+                    </div>
+                    <h3>Secrétariat de mairie</h3>
+                    <h5>Coralie Saintourein</h5>
+                    <div class="row contacts">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 contact"></div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 contact">
+                            <i class="fa fa-phone fa-2x"></i>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 contact">
+                            <i class="fa fa-at fa-2x"></i>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 contact">
+                            <i class="fa fa-envelope fa-2x"></i>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 contact"></div>
+                    </div><!-- end contact row -->
+
+                    <!-- Open hours -->
+                    <!-- Labels -->
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <p>Matin</p>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                            <p>Après-midi</p>
+                        </div>
+                    </div><!-- end contact row -->
+
+                    <!-- Monday -->  
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <p>Lundi</p>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <p>08h30</p>
+                            <p>12h30</p>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                            <p>Fermé</p>
+                        </div>
+                    </div><!-- end contact row -->
+
+                    <!-- Tuesday -->  
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <p>Mardi</p>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <p>08h30</p>
+                            <p>12h30</p>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                            <p>Fermé</p>
+                        </div>
+                    </div><!-- end contact row -->
+
+                    <!-- Wenesday -->  
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <p>Mercredi</p>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <p>Fermé</p>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                            <p>Fermé</p>
+                        </div>
+                    </div><!-- end contact row -->
+
+                    <!-- Thursday -->  
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 ">
+                            <p>Jeudi</p>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <p>08h30</p>
+                            <p>12h30</p>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                            <p>Fermé</p>
+                        </div>
+                    </div><!-- end contact row -->
+
+                    <!-- Friday -->  
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 ">
+                            <p>Vendredi</p>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <p>08h30</p>
+                            <p>12h30</p>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                            <p>Fermé</p>
+                        </div>
+                    </div><!-- end contact row -->
+                        
+                </div><!-- end col-lg-3 -->
+            </div><!-- end row -->
+        </div> <!--end container -->
+    </div><!-- end townservices -->
 
 {% endblock %}
