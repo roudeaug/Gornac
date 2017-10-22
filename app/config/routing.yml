@@ -1,3 +1,7 @@
+gr_supervisor:
+    resource: "@GRSupervisorBundle/Resources/config/routing.yml"
+    prefix:   /
+
 gr_showcase:
     resource: "@GRShowcaseBundle/Resources/config/routing.yml"
     prefix:   /
