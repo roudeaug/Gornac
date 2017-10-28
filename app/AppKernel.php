@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new GR\ShowcaseBundle\GRShowcaseBundle(),
             new GR\UserBundle\GRUserBundle(),
             new GR\AdminBundle\GRAdminBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
