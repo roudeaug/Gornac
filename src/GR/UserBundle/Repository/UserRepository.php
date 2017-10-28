@@ -1,6 +1,6 @@
 <?php
 
-namespace GR\SupervisorBundle\Repository;
+namespace GR\UserBundle\Repository;
 
 /**
  * UserRepository

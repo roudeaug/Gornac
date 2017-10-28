@@ -16,7 +16,8 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new GR\ShowcaseBundle\GRShowcaseBundle(),
-            new GR\SupervisorBundle\GRSupervisorBundle(),
+            new GR\UserBundle\GRUserBundle(),
+            new GR\AdminBundle\GRAdminBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

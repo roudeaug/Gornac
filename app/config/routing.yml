@@ -1,8 +1,18 @@
-gr_supervisor:
-    resource: "@GRSupervisorBundle/Resources/config/routing.yml"
+gr_admin:
+    resource: "@GRAdminBundle/Resources/config/routing.yml"
     prefix:   /
 
 gr_showcase:
     resource: "@GRShowcaseBundle/Resources/config/routing.yml"
     prefix:   /
 
+login:
+    path: /admin/login
+    defaults:
+        _controller: GRUserBundle:Security:login
+
+login_check:
+    path: /admin/login_check
+
+logout:
+    path: /admin/logout

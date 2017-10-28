@@ -1,3 +1,0 @@
-gr_supervisor_identification:
-    path:     /supervisor
-    defaults: { _controller: GRSupervisorBundle:Supervisor:signIn }
