@@ -1,11 +1,66 @@
-
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title> Administrateur - Gornac.com</title>
+        <link rel="stylesheet" href="http://localhost/gornac/web/css/dashboard.css">
+        <link rel="stylesheet" href="http://localhost/gornac/web/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://localhost/gornac/web/assets/ionicons-1.5.2/css/ionicons.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
     <body>
-        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-            Connecté en tant que {{ app.user.username }}
-            -
-            <a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
-        {% else %}
-            <a href="{{ path('fos_user_security_login') }}">Connexion</a>
-        {% endif %}   
-        <div> Hello World! </div>
+        <header "container-fluid">
+            <div class="logo">
+                <i class="ion-code-working"></i>
+                <p><strong>Gornac</strong></p>
+            </div>
+            <div class="header-content">
+                <div class="row">
+                    <div class="breadcrumb-perso col-sm-9">
+                        <div class="br-content">
+                            <span class="text">
+                                <p>DASHBOARD - Acceuil</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="account col-sm-3" id="account">
+                        <div class="acc-content">
+                            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                                {{ app.user.username }}
+                                <img src="http://localhost/gornac/web/img/dashboard/avatar.jpg" alt="">
+                                <a href="{{ path('fos_user_security_logout') }}"><button type="button" class="btn btn-default">Se déconnecter</button></a>
+                            {% else %}
+                                <a href="{{ path('fos_user_security_login') }}"><button type="button" class="btn btn-default">Se déconnecter</button></a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="nav">
+            <div class="menu">
+                <a href="#"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a>
+            </div>
+            <div class="submenu" id="submenu">
+                <a href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Actualités </a>
+            </div>
+            <div class="submenu" id="submenu">
+                <a href="#"><i class="fa fa-university" aria-hidden="true"></i> Administration <i class="ion-chevron-down right " id="icon"></i></a>
+                <div class="sub-content hide" id="sub-content">
+                    <a href="#"> Services municipaux </a>
+                    <a href="#"> Services extérieurs </a>
+                    <a href="#"> Equipe municipale </a>
+                    <a href="#"> Commissions </a>
+                </div>
+            </div>
+        </div>
     </body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://localhost/gornac/web/js/dashboard.js"></script>
+    <script src="https://use.fontawesome.com/160bb722cb.js"></script> 
+
+</html>
+
