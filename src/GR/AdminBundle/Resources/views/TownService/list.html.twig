@@ -1,0 +1,37 @@
+{% extends "GRAdminBundle:Admin:dashboard.html.twig" %}
+
+{% block breadcrumb %} Services municipaux {% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="well col-sm-6"> Liste des services municipaux </h1>
+        </div>
+        {% for service in listServices %}
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="list-group">
+                        <div class="list-group-item">
+                            <div class="row">
+                                <div class="col-sm-8" >{{ service.name }}</div>
+                                <a href="{{ path('gr_admin_town_service_edit', {'id':service.id}) }}" class="col-sm-2" >
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:5px;"></i>&Eacute;diter</a>
+                                <a href="{{ path('gr_admin_town_service_delete', {'id':service.id}) }}" class="col-sm-2" >
+                                    <i class="fa fa-trash" aria-hidden="true" style="margin-right:5px;"></i>Supprimer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="list-group ">
+                    <a href="{{ path('gr_admin_town_service_add') }}" class="list-group-item list-group-item-info" >
+                        <i class="fa fa-plus" aria-hidden="true" style="margin-right:15px;"></i>Créer un nouveau service municipal</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

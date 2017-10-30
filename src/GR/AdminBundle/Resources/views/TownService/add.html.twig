@@ -1,0 +1,9 @@
+{% extends "GRAdminBundle:Admin:dashboard.html.twig" %}
+
+{% block breadcrumb %} Créer un nouveau service municipal {% endblock %}
+
+{% block content %}
+    
+    {{ include("GRAdminBundle:TownService:form.html.twig") }}
+
+{% endblock %}

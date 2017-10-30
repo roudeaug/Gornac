@@ -1,0 +1,201 @@
+<div class="container-fluid">
+    <div class="row">
+        <h2> Nouveau service municipal </h2>
+    </div>
+    <div class="row">
+        <div class=" col-sm-6 well">
+            {# Start form #}
+            {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+            {# Form errors #}
+            {{ form_errors(form) }}
+
+            {# Name #}
+            <div class="form-group">
+                {{ form_label(form.name, "Nom", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                {{ form_errors(form.name) }}
+                <div class="col-sm-10">
+                    {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+
+            {# ImgUrl #}
+            <div class="form-group">
+                {{ form_label(form.imgUrl, "Image url", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                {{ form_errors(form.imgUrl) }}
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="addon-url">{{ addonUrl }}</span>
+                        {{ form_widget(form.imgUrl, {'attr': {'class': 'form-control', 'aria-describedby': 'addon-url'}}) }}
+                    </div>
+                </div>
+            </div>
+
+            {# PersonInCharge #}
+            <div class="form-group">
+                {{ form_label(form.personInCharge, "Responsable", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                {{ form_errors(form.personInCharge) }}
+                <div class="col-sm-10">
+                    {{ form_widget(form.personInCharge, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+
+            {# Phone #}
+            <div class="form-group">
+                {{ form_label(form.phone, "Téléphone", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                {{ form_errors(form.phone) }}
+                <div class="col-sm-10">
+                    {{ form_widget(form.phone, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+
+            {# Email #}
+            <div class="form-group">
+                {{ form_label(form.email, "Email", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                {{ form_errors(form.email) }}
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        {{ form_widget(form.email, {'attr': {'class': 'form-control', 'aria-describedby': 'addon-email'}}) }}
+                        <span class="input-group-addon" id="addon-email">{{ addonEmail }}</span>
+                    </div>
+                </div>
+            </div>
+
+            {# Adress #}
+            <div class="form-group">
+                {{ form_label(form.adress, "Adresse", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                {{ form_errors(form.adress) }}
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        {{ form_widget(form.adress, {'attr': {'class': 'form-control', 'aria-describedby': 'addon-adress'}}) }}
+                        <span class="input-group-addon" id="addon-adress">{{ addonAdress }}</span>
+                    </div>
+                </div>
+            </div>
+
+            {# Timesheet #}
+            <div class="form-group">
+                <label class="col-sm-2 control-label"> Horaires </label>
+                <div class="col-sm-10">
+                    <table class="table table-bordered">
+                        <thead>
+                            <th></th>
+                            <th>Matin</th>
+                            <th>Après-midi</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lundi</td>
+                                <td>
+                                    {{ form_errors(form.monday.am_start) }}
+                                    {{ form_widget(form.monday.am_start) }}
+                                    {{ form_errors(form.monday.am_end) }}
+                                    {{ form_widget(form.monday.am_end) }}
+                                    {{ form_errors(form.monday.amIsClosed) }}
+                                    {{ form_widget(form.monday.amIsClosed) }}
+                                </td>
+                                <td>
+                                    {{ form_errors(form.monday.pm_start) }}
+                                    {{ form_widget(form.monday.pm_start) }}
+                                    {{ form_errors(form.monday.pm_end) }}
+                                    {{ form_widget(form.monday.pm_end) }}
+                                    {{ form_errors(form.monday.pmIsClosed) }}
+                                    {{ form_widget(form.monday.pmIsClosed) }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mardi</td>
+                                <td>
+                                    {{ form_errors(form.tuesday.am_start) }}
+                                    {{ form_widget(form.tuesday.am_start) }}
+                                    {{ form_errors(form.tuesday.am_end) }}
+                                    {{ form_widget(form.tuesday.am_end) }}
+                                    {{ form_errors(form.tuesday.amIsClosed) }}
+                                    {{ form_widget(form.tuesday.amIsClosed) }}
+                                </td>
+                                <td>
+                                    {{ form_errors(form.tuesday.pm_start) }}
+                                    {{ form_widget(form.tuesday.pm_start) }}
+                                    {{ form_errors(form.tuesday.pm_end) }}
+                                    {{ form_widget(form.tuesday.pm_end) }}
+                                    {{ form_errors(form.tuesday.pmIsClosed) }}
+                                    {{ form_widget(form.tuesday.pmIsClosed) }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mercredi</td>
+                                <td>
+                                    {{ form_errors(form.wednesday.am_start) }}
+                                    {{ form_widget(form.wednesday.am_start) }}
+                                    {{ form_errors(form.wednesday.am_end) }}
+                                    {{ form_widget(form.wednesday.am_end) }}
+                                    {{ form_errors(form.wednesday.amIsClosed) }}
+                                    {{ form_widget(form.wednesday.amIsClosed) }}
+                                </td>
+                                <td>
+                                    {{ form_errors(form.wednesday.pm_start) }}
+                                    {{ form_widget(form.wednesday.pm_start) }}
+                                    {{ form_errors(form.wednesday.pm_end) }}
+                                    {{ form_widget(form.wednesday.pm_end) }}
+                                    {{ form_errors(form.wednesday.pmIsClosed) }}
+                                    {{ form_widget(form.wednesday.pmIsClosed) }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jeudi</td>
+                                <td>
+                                    {{ form_errors(form.thursday.am_start) }}
+                                    {{ form_widget(form.thursday.am_start) }}
+                                    {{ form_errors(form.thursday.am_end) }}
+                                    {{ form_widget(form.thursday.am_end) }}
+                                    {{ form_errors(form.thursday.amIsClosed) }}
+                                    {{ form_widget(form.thursday.amIsClosed) }}
+                                </td>
+                                <td>
+                                    {{ form_errors(form.thursday.pm_start) }}
+                                    {{ form_widget(form.thursday.pm_start) }}
+                                    {{ form_errors(form.thursday.pm_end) }}
+                                    {{ form_widget(form.thursday.pm_end) }}
+                                    {{ form_errors(form.thursday.pmIsClosed) }}
+                                    {{ form_widget(form.thursday.pmIsClosed) }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Vendredi</td>
+                                <td>
+                                    {{ form_errors(form.friday.am_start) }}
+                                    {{ form_widget(form.friday.am_start) }}
+                                    {{ form_errors(form.friday.am_end) }}
+                                    {{ form_widget(form.friday.am_end) }}
+                                    {{ form_errors(form.friday.amIsClosed) }}
+                                    {{ form_widget(form.friday.amIsClosed) }}
+                                </td>
+                                <td>
+                                    {{ form_errors(form.friday.pm_start) }}
+                                    {{ form_widget(form.friday.pm_start) }}
+                                    {{ form_errors(form.friday.pm_end) }}
+                                    {{ form_widget(form.friday.pm_end) }}
+                                    {{ form_errors(form.friday.pmIsClosed) }}
+                                    {{ form_widget(form.friday.pmIsClosed) }}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            
+
+            {# Submit button #}
+            <div class="col-sm-2" style="margin-left: 5px;"></div>
+            {{ form_widget(form.enregistrer, {'attr': {'class': 'btn btn-primary'}}) }}
+
+            {# Others #}
+            {#{ form_rest(form) }}
+
+            {# End form #}
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+</div>

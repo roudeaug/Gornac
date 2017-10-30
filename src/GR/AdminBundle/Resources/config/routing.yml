@@ -1,3 +1,29 @@
 gr_admin_dashboard:
     path:     /admin
     defaults: { _controller: GRAdminBundle:Admin:dashboard }
+
+gr_admin_actuality_list:
+    path:     /admin/actualites
+    defaults: { _controller: GRAdminBundle:Actuality:list }
+
+gr_admin_town_service_list:
+    path:     /admin/services_municipaux
+    defaults: { _controller: GRAdminBundle:TownService:list }
+
+gr_admin_town_service_add:
+    path:     /admin/services_municipaux/ajouter
+    defaults: { _controller: GRAdminBundle:TownService:add }
+
+gr_admin_town_service_edit:
+    path:     /admin/services_municipaux/modifier/{id}
+    defaults: { _controller: GRAdminBundle:TownService:edit }
+
+gr_admin_town_service_delete:
+    path:     /admin/services_municipaux/supprimer/{id}
+    defaults: { _controller: GRAdminBundle:TownService:delete }
+
+gr_admin_town_service_delete_confirmed:
+    path:     /admin/services_municipaux/supprimer/confirmation/{id}
+    defaults: { _controller: GRAdminBundle:TownService:deleteConfirmed }
+
+

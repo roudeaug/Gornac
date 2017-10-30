@@ -1,0 +1,19 @@
+{% extends "GRAdminBundle:Admin:dashboard.html.twig" %}
+
+{% block breadcrumb %} Services municipaux - Suppression {% endblock %}
+
+{% block content %}
+    
+    <div class="alert alert-danger" role="alert">
+        <p class="lead"><strong>Attention !</strong> <br>
+        Vous êtes sur le point de supprimer le service municipal : {{service.name}} <br><br>
+        Souhaitez-vous poursuivre ? <br><br></p>
+        <a href="{{ path('gr_admin_town_service_delete_confirmed', {'id':service.id}) }}">
+            <button type="button" class="btn btn-danger">Confirmer</button>
+        </a>
+        <a href="{{ path('gr_admin_town_service_list') }}">
+            <button type="button" class="btn btn-default">Annuler</button>
+        </a>
+    </div>
+
+{% endblock %}
